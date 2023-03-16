@@ -1,16 +1,16 @@
 # coffee_memo
 
-A new Flutter project.
+flutterで初めて作成したアプリでコーヒーメモアプリ。
+飲んだコーヒー豆をメモしコーヒーについての知識を深めることができる。
+まだ作成途中であり、改善を行っていく予定。
+機能としては
+①メモ作成
+②メモ編集
+③メモ閲覧
+④メモ削除
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+メモ作成項目としては
+①メモタイトル
+②コーヒー豆の画像
+③コク、苦味の設定
+④感想
