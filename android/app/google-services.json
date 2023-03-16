@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "287838517928",
+    "project_id": "coffeememo-dedc4",
+    "storage_bucket": "coffeememo-dedc4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287838517928:android:03f6d085da9ca6fc9e209d",
+        "android_client_info": {
+          "package_name": "com.example.coffee_memo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287838517928-levavjaj2ht66jdqf8um0f1rul5eq31p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6VqG7lGSQaSjC7ulpLUOzNB58zXY8Fts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287838517928-levavjaj2ht66jdqf8um0f1rul5eq31p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
