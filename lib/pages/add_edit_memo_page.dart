@@ -92,6 +92,15 @@ class _AddEditMemoPageState extends State<AddEditMemoPage> {
     final doc = FirebaseFirestore.instance
         .collection('memo')
         .doc(widget.currentMemo!.id);
+
+    //imageをfirebaseのstorageにアップロード
+    if (imageFile != null) {
+      final task = await FirebaseStorage.instance
+          .ref('memo/${doc.id}')
+          .putFile(imageFile!);
+      imgUrl = await task.ref.getDownloadURL();
+    }
+
     await doc.update({
       'title': titleController.text,
       'detail': detailController.text,
@@ -108,6 +117,7 @@ class _AddEditMemoPageState extends State<AddEditMemoPage> {
     if (widget.currentMemo != null) {
       titleController.text = widget.currentMemo!.title;
       detailController.text = widget.currentMemo!.detail;
+      imgUrl = widget.currentMemo!.imgUrl;
       _richValue = widget.currentMemo!.richValue;
       _bitterValue = widget.currentMemo!.bitterValue;
     }
