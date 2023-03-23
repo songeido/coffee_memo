@@ -21,6 +21,9 @@ class _AddEditMemoPageState extends State<AddEditMemoPage> {
   //イメージファイルの格納変数
   File? imageFile;
 
+  //イメージファイルfirebaseの格納URL
+  String? imgUrl;
+
   //ローディング画面のフラグ
   bool isLoading = false;
 
@@ -61,7 +64,6 @@ class _AddEditMemoPageState extends State<AddEditMemoPage> {
   Future<void> createMemo() async {
     final doc = FirebaseFirestore.instance.collection('memo').doc();
 
-    String? imgUrl;
     //imageをfirebaseのstorageにアップロード
     if (imageFile != null) {
       final task = await FirebaseStorage.instance
@@ -93,6 +95,9 @@ class _AddEditMemoPageState extends State<AddEditMemoPage> {
     await doc.update({
       'title': titleController.text,
       'detail': detailController.text,
+      'richValue': _richValue,
+      'bitterValue': _bitterValue,
+      'imgUrl': imgUrl,
       'updatedDate': Timestamp.now(),
     });
   }

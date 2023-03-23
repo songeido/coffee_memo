@@ -22,6 +22,7 @@ class MemoDetailPage extends StatelessWidget {
             //mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 40),
+              //画像
               SizedBox(
                 height: 200,
                 width: 200,
@@ -43,7 +44,36 @@ class MemoDetailPage extends StatelessWidget {
               //     fontWeight: FontWeight.bold,
               //   ),
               // ),
-              const SizedBox(height: 40),
+              const SizedBox(height: 20),
+              Container(
+                width: 250,
+                decoration: BoxDecoration(
+                  //border: Border.all(width: 5, color: Colors.brown),
+                  color: Colors.brown,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Row(
+                  //真ん中に寄せる
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "コク：${memo.richValue?.toInt()}",
+                      style: const TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                    const SizedBox(width: 30),
+                    Text(
+                      "苦味：${memo.bitterValue?.toInt()}",
+                      style: const TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 20),
+              //感想
               ConstrainedBox(
                 constraints: const BoxConstraints(
                   minHeight: 150, //最小の高さ
@@ -52,7 +82,8 @@ class MemoDetailPage extends StatelessWidget {
                 child: Container(
                   padding: const EdgeInsets.all(5.0),
                   decoration: BoxDecoration(
-                    border: Border.all(width: 5, color: Colors.brown),
+                    //border: Border.all(width: 5, color: Colors.brown),
+                    color: Colors.brown,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Text(
